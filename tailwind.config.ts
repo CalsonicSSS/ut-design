@@ -24,7 +24,7 @@ const config: Config = {
         'navy-1': '#07308C',
         'navy-2': '#001D6C',
         'navy-3': '#00204E',
-        'nav-item': '#4F4F4E',
+        'nav-item': '#626262',
         'color-base-1': '#21272A',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

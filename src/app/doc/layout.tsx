@@ -85,7 +85,7 @@ export default function DocLayout({ children }: { children: ReactNode }) {
           <Link
             target='_blank'
             rel='noopener noreferrer'
-            href='/unite-toolkit/2025 V3 UNITE Core Components Guidebook.pdf'
+            href='https://cleverleylab.com/unite-toolkit/UNITE Core Components Guidebook.pdf'
             className='flex justify-end items-center font-urbanist font-semibold text-[14px] leading-[16px] sm:w-auto'
           >
             <div className='flex hover:bg-slate-200 p-2 rounded-lg'>

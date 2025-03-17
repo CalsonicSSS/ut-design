@@ -20,7 +20,7 @@ const Hero = () => {
             <Link
               target='_blank'
               rel='noopener noreferrer'
-              href={`/unite-toolkit/2025 V3 UNITE Core Components Guidebook.pdf`}
+              href={`https://cleverleylab.com/unite-toolkit/UNITE Core Components Guidebook.pdf`}
               className='button-outline sm:w
             -auto'
             >

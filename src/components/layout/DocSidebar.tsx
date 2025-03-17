@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
+import { assetPathMode } from '@/utils';
 
-const sidebarSections = [
+const devSidebarSections = [
   { name: 'Getting Started', path: '/doc/getting-started' },
   { name: 'About this Resource', path: '/doc/about-this-resource' },
   { name: 'Main Contents', path: '/doc/main-contents' },
@@ -16,6 +17,21 @@ const sidebarSections = [
     subItems: [
       { name: 'Glossary', path: '/doc/glossary' },
       { name: 'Citation', path: '/doc/citation' },
+    ],
+  },
+];
+
+const prodSidebarSections = [
+  { name: 'Getting Started', path: '/doc/getting-started/' },
+  { name: 'About this Resource', path: '/doc/about-this-resource/' },
+  { name: 'Main Contents', path: '/doc/main-contents/' },
+  { name: 'Resources Lists', path: '/doc/resources-lists/' },
+  {
+    name: 'Appendices',
+    path: '/doc/glossary/',
+    subItems: [
+      { name: 'Glossary', path: '/doc/glossary/' },
+      { name: 'Citation', path: '/doc/citation/' },
     ],
   },
 ];
@@ -43,7 +59,7 @@ export default function DocSidebar({ onNavClick }: DocSidebarProps) {
     <nav className='space-y-5'>
       <h2 className='font-bold text-lg mb-6 lg:hidden'>Documentation Menu</h2>
 
-      {sidebarSections.map((section) => {
+      {(assetPathMode === 'DEV' ? devSidebarSections : prodSidebarSections).map((section) => {
         const isMainActive = pathname === section.path || (section.subItems && section.subItems.some((subItem) => subItem.path === pathname));
         const hasSubItems = section.subItems && section.subItems.length > 0;
         const isExpanded = expandedSections[section.path] || isMainActive;

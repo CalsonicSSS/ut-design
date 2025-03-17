@@ -31,7 +31,7 @@ export default function Element3Layout({ children }: { children: ReactNode }) {
 
   // Extract subsection ID from the pathname
   // Assuming paths like /doc/main-contents/element-1/e1.1
-  const subsectionMatch = pathname.match(/e(\d+\.\d+)$/);
+  const subsectionMatch = pathname.match(/e(\d+\.\d+)\/?$/);
   const activeSubsection = subsectionMatch ? subsectionMatch[1] : '3.1';
 
   const elementTitle = 'Element 3 Transition Readiness';
