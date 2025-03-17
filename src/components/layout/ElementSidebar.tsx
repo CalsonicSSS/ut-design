@@ -14,9 +14,14 @@ interface ElementSidebarProps {
   activeSubsection: string;
   elementTitle: string;
   currentElementNumber: number;
+  onNavClick?: () => void;
 }
 
-export default function ElementSidebar({ elementTitle, subsections, activeSubsection, currentElementNumber }: ElementSidebarProps) {
+export default function ElementSidebar({ elementTitle, subsections, activeSubsection, currentElementNumber, onNavClick }: ElementSidebarProps) {
+  const handleNavClick = () => {
+    if (onNavClick) onNavClick(); // Close the sidebar when clicking a link
+  };
+
   return (
     <>
       <h3 className='hidden lg:block font-lato text-[#63B1E5] text-[15px] lg:text-[15px] font-semibold leading-[16px] mb-6 lg:mb-4'>{elementTitle}</h3>
@@ -35,6 +40,7 @@ export default function ElementSidebar({ elementTitle, subsections, activeSubsec
         {subsections.map((each) => (
           <li key={each.id}>
             <Link
+              onClick={handleNavClick}
               href={`/doc/main-contents/element-${currentElementNumber}/e${each.id}`}
               className={`block ml-0 lg:ml-1 py-3 lg:py-2 font-medium leading-[18px] font-lato px-4 lg:px-3 text-[14px] text-[#454545] ${
                 activeSubsection === each.id ? 'bg-[#D837371A] border-l-4 border-[#FD5045] text-[#63B1E5]' : 'hover:bg-gray-100'

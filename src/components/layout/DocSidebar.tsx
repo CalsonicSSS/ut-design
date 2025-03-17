@@ -36,7 +36,7 @@ export default function DocSidebar({ onNavClick }: DocSidebarProps) {
   };
 
   const handleNavClick = () => {
-    if (onNavClick) onNavClick();
+    if (onNavClick) onNavClick(); // Close the sidebar when clicking a link
   };
 
   return (

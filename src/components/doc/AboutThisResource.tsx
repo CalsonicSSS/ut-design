@@ -13,50 +13,50 @@ export default function AboutThisResourceContent() {
           mental health care settings.
         </p>
         <p className='mb-4 md:mb-6 text-base'>
-          This resource is not meant to be prescriptive. Transition policies and practices vary based on a number of factors. This Guidebook is meant to be used as a starting place
-          to guide further discussion and development of transition policies and interventions that are fitting for your community.
+          This resource is not meant to be prescriptive. Transition policies and practices vary based on a number of factors. This guidebook is meant to be used as a starting place
+          for further discussion and development of transition policies and interventions that fit within your community.
         </p>
         <p className='text-base'>
-          Further support for the implementation of these core components can be found in the <span className='font-bold'>Unite Implementation Workbook.</span> These two resources
+          Further support for the implementation of these core components can be found in <span className='font-bold'>the Unite Implementation Workbook.</span> These two resources
           are intended to be used together.
         </p>
       </section>
 
       <section id='using-this-resource' data-section className='pt-6 md:pt-10'>
         <h1 className='doc-content-sub-title lg:text-[23px] sm:text-[20px] mb-4'>Using this Resource</h1>
-        <p className='mb-4 text-base'>
+        <p className='text-base'>
           {
-            "Core components are divided into six categories, or 'elements', intended to support thinking of the transition process from beginning to end. Each core component includes a brief description of the component as well as other resources to support your understanding where relevant."
+            'The core components are grouped into six categories, or “elements,” that guide the transition process from beginning to end. Each core component subsection includes a brief overview and resources to support your understanding, including:'
           }
         </p>
-        <p className='mb-3 text-base'>This might include:</p>
         <DotList
           contentList={['Definitions of keywords', 'Linked citations', 'References to sections of the Implementation Workbook', 'Quotes or notes from expert knowledge users']}
           ms={[0, 0, 0, 0]}
         />
-        <p className='mt-4 mb-3 text-base'>
-          In many of the components, we describe and link to external resources. These resources provide further learning opportunities and implementation support in alignment with
-          that core component. Resources can include:
+        <p className='mb-3 text-base'>
+          Throughout this guidebook, we describe and link to external resources. These resources provide further learning opportunities and implementation support in alignment with
+          the corresponding core component. Resources include:
         </p>
         <DotList contentList={['Example Programs', 'Interactive Trainings', 'Academic Publications', 'Example Guidelines or Policies', 'Measurement Tools']} ms={[0, 0, 0, 0, 0]} />
+        <p className='mb-3 text-base'>All resources and links were last reviewed in February 2025. We aim to review links annually and update them where needed.</p>
       </section>
 
       <section id='development-of-this-resource' data-section className='pt-6 md:pt-10'>
         <h1 className='doc-content-sub-title lg:text-[23px] sm:text-[20px] mb-4'>Development of this Resource</h1>
         <p className='mb-4 md:mb-6 text-base'>This resource has been developed through extensive community collaborations, research partnerships, and literature review. </p>
         <p className='mb-4 md:mb-6 text-base'>
-          Definitions in the Core Component Guidebook, unless otherwise cited, were developed in consultation with an Expert Advisory Committee that included researchers,
-          clinicians, youth, and family members and caregivers from across Canada.
+          Unless otherwise cited, definitions in this guidebook were developed in consultation with an Expert Advisory Committee that included researchers, clinicians, youth,
+          family members, and caregivers from across Canada.
         </p>
         <p className='mb-4 md:mb-6 text-base'>
-          {"Quotes and 'Notes from a Navigator' in this guidebook are sourced from research studies conducted by our research team, including a"}
+          {'Quotations and “Notes from a Navigator” were sourced from research studies conducted by our research team, including a '}
           <span className='underline'>pan-Canadian Delphi study that developed core components</span> and{' '}
-          <span className='underline'>the Navigator Evaluation Advancing Transitions (NEAT) Study</span>.
+          <span className='underline'>the Navigator Evaluation Advancing Transitions (NEAT) Study.</span>.
         </p>
         <p className='font-bold mb-3 text-base'>{"All 'Notes from a Navigator' quotes are attributed to a manuscript in preparation and should not be copied/reproduced:"}</p>
         <DotList
           contentList={[
-            'Cleverley K et al. (2025) Understanding the scope and impact of the youth mental health transition navigator role: perspectives of navigators and clinicians. [manuscript in preparation].',
+            'Cleverley K et al. (2023) Understanding the scope and impact of the youth mental health transition navigator role: perspectives of navigators and clinicians. [manuscript in preparation].',
           ]}
           ms={[0]}
         />

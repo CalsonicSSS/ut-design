@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export default function GlossarySidebar() {
   return (
-    <Link href={'/doc/glossary'} className='relative hover:cursor-pointer'>
-      <div className='fixed right-0 top-1/4 bg-[#195b8b] py-[20PX] px-[17px] flex flex-col items-center justify-center shadow-2xl'>
+    <Link href={'/doc/glossary'} className='relative hover:cursor-pointer '>
+      <div className='fixed right-0 top-1/4 bg-[#195b8b] py-[20PX] px-[17px] flex flex-col items-center justify-center shadow-full'>
         {/* Info icon */}
         <Image
           src={`${assetPathMode === 'PROD' ? '/unite-toolkit' : ''}/glossary_info_icon.svg`}

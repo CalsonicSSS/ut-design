@@ -9,7 +9,7 @@ export default function SubSection1_1() {
         <HighlightTextButton
           clickToId={'gt-icp'}
           title='Integrated care pathway'
-          tooltipDesc='Integrated care pathways are structured; multipurpose care plans which outline the steps involved in the care of patients with a specific clinical problem.'
+          tooltipDesc='Structured, multipurpose care plans that outline the steps involved in the care of patients with a specific clinical problem.'
         />
         <HighlightTextButton clickToId={'gt-tprocess'} title='Transition process' tooltipDesc='A series of action steps that are followed to complete a care transition.' />
       </div>

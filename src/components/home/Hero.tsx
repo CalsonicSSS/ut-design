@@ -17,7 +17,15 @@ const Hero = () => {
             <Link href='/doc#about-this-resource' className='button-fill sm:w-auto'>
               Go to Web version
             </Link>
-            <button className='button-outline sm:w-auto'>Download PDF</button>
+            <Link
+              target='_blank'
+              rel='noopener noreferrer'
+              href={`/unite-toolkit/2025 V3 UNITE Core Components Guidebook.pdf`}
+              className='button-outline sm:w
+            -auto'
+            >
+              Download PDF
+            </Link>
           </div>
         </div>
         <div className='mt-10 xl:m-0'>

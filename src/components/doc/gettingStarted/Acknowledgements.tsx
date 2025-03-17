@@ -9,25 +9,25 @@ export default function AcknowledgementsContent() {
       <DotList
         contentList={[
           <p key={1}>
-            Kristin Cleverley <span className='text-[#7FD5D1]'>1,2</span>
+            Kristin Cleverley <span className='text-[#63B1E5]'>1,2</span>
           </p>,
           <p key={2}>
-            Julia Davies <span className='text-[#7FD5D1]'>1.2</span>
+            Julia Davies <span className='text-[#63B1E5]'>1.2</span>
           </p>,
           <p key={3}>
-            Emma McCann <span className='text-[#7FD5D1]'>1</span>
+            Emma McCann <span className='text-[#63B1E5]'>1</span>
           </p>,
           <p key={4}>
-            Celeste Agard <span className='text-[#7FD5D1]'>1</span>
+            Celeste Agard <span className='text-[#63B1E5]'>1</span>
           </p>,
           <p key={6}>
-            Savina Edward <span className='text-[#7FD5D1]'>1</span>
+            Savina Edward <span className='text-[#63B1E5]'>1</span>
           </p>,
           <p key={7}>
-            Shabeeha Firthouse <span className='text-[#7FD5D1]'>1</span>
+            Shabeeha Firthouse <span className='text-[#63B1E5]'>1</span>
           </p>,
           <p key={8}>
-            Soha Salman <span className='text-[#7FD5D1]'>2</span>
+            Soha Salman <span className='text-[#63B1E5]'>2</span>
           </p>,
         ]}
         ms={[0, 0, 0, 0, 0, 0]}

@@ -16,6 +16,9 @@ const config: Config = {
       xl: '1280px',
     },
     extend: {
+      boxShadow: {
+        full: '0 0 25px 4px rgba(0, 0, 0, 0.4)',
+      },
       colors: {
         'navy-0': '#63B1E5',
         'navy-1': '#07308C',

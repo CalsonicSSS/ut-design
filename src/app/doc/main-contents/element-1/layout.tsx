@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Menu } from 'lucide-react';
 import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 import { usePathname } from 'next/navigation';
@@ -31,6 +31,7 @@ const subsections = [
 
 export default function Element1Layout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
+  const [isMobileSideBarSheetOpen, setIsMobileSideBarSheetOpen] = useState(false);
 
   // Extract subsection ID from the pathname
   // Assuming paths like /doc/main-contents/element-1/e1.1
@@ -54,7 +55,7 @@ export default function Element1Layout({ children }: { children: ReactNode }) {
       <ElementHeader elementTitle={elementTitle} subsectionId={activeSubsection} subsectionTitle={subsections.find((s) => s.id === activeSubsection)?.title || ''} />
 
       {/* mobile sidebar */}
-      <Sheet>
+      <Sheet open={isMobileSideBarSheetOpen} onOpenChange={setIsMobileSideBarSheetOpen}>
         <SheetTrigger asChild>
           <button className='lg:hidden fixed z-50 top-[60px] left-4 bg-white rounded-full p-2 shadow-lg' aria-label='Toggle element sidebar'>
             <Menu size={24} />
@@ -63,7 +64,13 @@ export default function Element1Layout({ children }: { children: ReactNode }) {
 
         {/* Mobile Sidebar Sheet */}
         <SheetContent side='left' className='w-[80%] py-6 px-0 overflow-y-auto max-h-screen'>
-          <ElementSidebar currentElementNumber={currentElementNumber} elementTitle={elementTitle} subsections={subsections} activeSubsection={activeSubsection} />
+          <ElementSidebar
+            onNavClick={() => setIsMobileSideBarSheetOpen(false)}
+            currentElementNumber={currentElementNumber}
+            elementTitle={elementTitle}
+            subsections={subsections}
+            activeSubsection={activeSubsection}
+          />
         </SheetContent>
       </Sheet>
 
