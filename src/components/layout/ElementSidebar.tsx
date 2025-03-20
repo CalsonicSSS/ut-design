@@ -30,7 +30,7 @@ export default function ElementSidebar({ elementTitle, subsections, activeSubsec
       <div className='p-6 lg:hidden'>
         <button className='bg-[#07308C] w-full text-white py-[8px] px-[18px] flex justify-center items-center rounded-xl'>
           <Image src={`${assetPathMode === 'PROD' ? '/unite-toolkit' : ''}/back_to_home.svg`} alt='back_to_home img' height={16} width={16} priority />
-          <Link href='/doc/main-contents' className='flex items-center ml-3 hover:opacity-70 font-bold text-[14px]'>
+          <Link href='/doc/six-core-elements' className='flex items-center ml-3 hover:opacity-70 font-bold text-[14px]'>
             <span>Back to Toolkit Home</span>
           </Link>
         </button>
@@ -41,7 +41,7 @@ export default function ElementSidebar({ elementTitle, subsections, activeSubsec
           <li key={each.id}>
             <Link
               onClick={handleNavClick}
-              href={`/doc/main-contents/element-${currentElementNumber}/e${each.id}`}
+              href={`/doc/six-core-elements/element-${currentElementNumber}/e${each.id}`}
               className={`block ml-0 lg:ml-1 py-3 lg:py-2 font-medium leading-[18px] font-lato px-4 lg:px-3 text-[14px] text-[#454545] ${
                 activeSubsection === each.id ? 'bg-[#D837371A] border-l-4 border-[#FD5045] text-[#63B1E5]' : 'hover:bg-gray-100'
               }`}
@@ -55,7 +55,7 @@ export default function ElementSidebar({ elementTitle, subsections, activeSubsec
       </ul>
 
       <div className='mt-8 ml-0 lg:ml-1 sm:hidden lg:block'>
-        <Link href='/doc/main-contents' className='flex items-center text-[#193E72] hover:opacity-70 font-medium text-[14px] lg:text-sm'>
+        <Link href='/doc/six-core-elements' className='flex items-center text-[#193E72] hover:opacity-70 font-medium text-[14px] lg:text-sm'>
           <ArrowLeft size={20} className='mr-2 h-4 flex-shrink-0' />
           <span>Return to Guidebook</span>
         </Link>

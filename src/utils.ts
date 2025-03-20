@@ -1,1 +1,1 @@
-export const assetPathMode: string = 'PROD'; // DEV | PROD
+export const assetPathMode: string = 'DEV'; // DEV | PROD

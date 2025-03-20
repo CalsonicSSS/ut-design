@@ -13,11 +13,11 @@ import Link from 'next/link';
 
 export default function DocLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const isMainElement = pathname.includes('/main-contents/element');
+  const isSixCoreElements = pathname.includes('/six-core-elements/element');
   const [glossaryOpen, setGlossaryOpen] = useState(false);
   const [isMobileSideBarSheetOpen, setIsMobileSideBarSheetOpen] = useState(false);
 
-  if (isMainElement) {
+  if (isSixCoreElements) {
     return (
       <div className='min-h-screen flex flex-col'>
         <CleverleylabHeader />

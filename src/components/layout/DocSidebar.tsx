@@ -9,7 +9,7 @@ import { assetPathMode } from '@/utils';
 const devSidebarSections = [
   { name: 'Getting Started', path: '/doc/getting-started' },
   { name: 'About this Resource', path: '/doc/about-this-resource' },
-  { name: 'Main Contents', path: '/doc/main-contents' },
+  { name: 'Six core elements', path: '/doc/six-core-elements' },
   { name: 'Resources Lists', path: '/doc/resources-lists' },
   {
     name: 'Appendices',
@@ -24,7 +24,7 @@ const devSidebarSections = [
 const prodSidebarSections = [
   { name: 'Getting Started', path: '/doc/getting-started/' },
   { name: 'About this Resource', path: '/doc/about-this-resource/' },
-  { name: 'Main Contents', path: '/doc/main-contents/' },
+  { name: 'Six core elements', path: '/doc/six-core-elements/' },
   { name: 'Resources Lists', path: '/doc/resources-lists/' },
   {
     name: 'Appendices',

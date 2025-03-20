@@ -12,25 +12,53 @@ const CleverleylabHeader = () => {
   const [isMobileProjectsOpen, setIsMobileProjectsOpen] = useState(false);
   const [isMobileTeamOpen, setIsMobileTeamOpen] = useState(false);
   const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
+  const [hoveredProjectItem, setHoveredProjectItem] = useState<string | null>(null);
+  const [hoveredResourceItem, setHoveredResourceItem] = useState<string | null>(null);
+
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const teamDropdownRef = useRef<HTMLDivElement | null>(null);
   const resourcesDropdownRef = useRef<HTMLDivElement | null>(null);
 
-  // Project dropdown items
+  // Project dropdown items with associated secondary items
   const projectItems = [
-    { href: 'https://cleverleylab.com/projects/longitudinal-youth-in-transition-study-lyits/', label: 'Longitudinal Youth in Transitional Study' },
-    { href: 'https://cleverleylab.com/projects/delphi-study/', label: 'National Delphi Study' },
-    { href: 'https://cleverleylab.com/projects/navigator-evaluation/', label: 'Navigator Evaluation Advancing Transitions' },
-    { href: 'https://cleverleylab.com/projects/navigatecampus/', label: 'Navigate CAMPUS' },
-    { href: 'https://cleverleylab.com/unite-toolkit/', label: 'UNITE Toolkit' },
-    { href: 'https://cleverleylab.com/projects/studentmentalhealth/', label: 'Connaught Award' },
-    { href: 'https://cleverleylab.com/projects/tips/', label: 'TIPS' },
-  ];
-
-  // Secondary dropdown items (shown on right of Projects menu)
-  const secondaryItems = [
-    { href: 'https://cleverleylab.com/projects/delphi-study/delphi-video/', label: 'Delphi Video' },
-    { href: 'https://cleverleylab.com/projects/delphi-study/core-components/', label: 'Core Components' },
+    {
+      href: 'https://cleverleylab.com/projects/longitudinal-youth-in-transition-study-lyits/',
+      label: 'Longitudinal Youth in Transitional Study',
+      secondaryItems: [],
+    },
+    {
+      href: 'https://cleverleylab.com/projects/delphi-study/',
+      label: 'National Delphi Study',
+      secondaryItems: [
+        { href: 'https://cleverleylab.com/projects/delphi-study/delphi-video/', label: 'Delphi Video' },
+        { href: 'https://cleverleylab.com/projects/delphi-study/core-components/', label: 'Core Components' },
+      ],
+    },
+    {
+      href: 'https://cleverleylab.com/projects/navigator-evaluation/',
+      label: 'Navigator Evaluation Advancing Transitions',
+      secondaryItems: [],
+    },
+    {
+      href: 'https://cleverleylab.com/projects/navigatecampus/',
+      label: 'Navigate CAMPUS',
+      secondaryItems: [],
+    },
+    {
+      href: 'https://cleverleylab.com/unite-toolkit/',
+      label: 'UNITE Toolkit',
+      secondaryItems: [],
+    },
+    {
+      href: 'https://cleverleylab.com/projects/studentmentalhealth/',
+      label: 'Connaught Award',
+      secondaryItems: [],
+    },
+    {
+      href: 'https://cleverleylab.com/projects/tips/',
+      label: 'TIPS',
+      secondaryItems: [],
+    },
   ];
 
   // Team dropdown items
@@ -39,15 +67,24 @@ const CleverleylabHeader = () => {
     { href: 'https://cleverleylab.com/team/supervision/', label: 'Supervision / Trainees' },
   ];
 
-  // Resources dropdown items
+  // Resources dropdown items with associated secondary items
   const resourcesItems = [
-    { href: 'https://cleverleylab.com/resources/publications/', label: 'Our Publication' },
-    { href: 'https://cleverleylab.com/resources/presentations/', label: 'Our Presentation' },
-    { href: 'https://cleverleylab.com/resources/toolbox/', label: 'Resource Toolbox' },
+    {
+      href: 'https://cleverleylab.com/resources/publications/',
+      label: 'Our Publication',
+      secondaryItems: [],
+    },
+    {
+      href: 'https://cleverleylab.com/resources/presentations/',
+      label: 'Our Presentation',
+      secondaryItems: [{ href: 'https://cleverleylab.com/resources/presentations/tbi/', label: 'TBI Workshop' }],
+    },
+    {
+      href: 'https://cleverleylab.com/resources/toolbox/',
+      label: 'Resource Toolbox',
+      secondaryItems: [],
+    },
   ];
-
-  // Secondary Resources dropdown items
-  const resourcesSecondaryItems = [{ href: 'https://cleverleylab.com/resources/presentations/tbi/', label: 'TBI Workshop' }];
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -55,6 +92,7 @@ const CleverleylabHeader = () => {
       // Close Projects dropdown if clicked outside
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsProjectsDropdownOpen(false);
+        setHoveredProjectItem(null);
       }
 
       // Close Team dropdown if clicked outside
@@ -65,12 +103,13 @@ const CleverleylabHeader = () => {
       // Close Resources dropdown if clicked outside
       if (resourcesDropdownRef.current && !resourcesDropdownRef.current.contains(event.target as Node)) {
         setIsResourcesDropdownOpen(false);
+        setHoveredResourceItem(null);
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside as EventListener);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside as EventListener);
     };
   }, []);
 
@@ -102,27 +141,46 @@ const CleverleylabHeader = () => {
               </button>
 
               {isProjectsDropdownOpen && (
-                <div className='absolute top-full left-0 z-50 bg-white shadow-lg border border-gray-200 flex'>
-                  {/* Primary project items */}
-                  <div className='w-72'>
+                <div className='absolute top-full left-0 z-50 bg-white shadow-lg border border-gray-200'>
+                  <div className='relative w-72'>
                     {projectItems.map((item) => (
-                      <Link
+                      <div
                         key={item.label}
-                        href={item.href}
-                        className='block py-3 px-4 hover:bg-gray-50 text-gray-700 border-b border-gray-100 last:border-b-0'
-                        onClick={() => setIsProjectsDropdownOpen(false)}
+                        className='relative'
+                        onMouseEnter={() => setHoveredProjectItem(item.label)}
+                        onMouseLeave={() => (item.secondaryItems.length === 0 ? setHoveredProjectItem(null) : null)}
                       >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
+                        <Link
+                          href={item.href}
+                          className='block py-3 px-4 hover:bg-gray-50 text-gray-700 border-b border-gray-100 last:border-b-0'
+                          onClick={() => {
+                            setIsProjectsDropdownOpen(false);
+                            setHoveredProjectItem(null);
+                          }}
+                        >
+                          {item.label}
+                          {item.secondaryItems.length > 0 && <ChevronRight className='w-4 h-4 absolute right-4 top-4' />}
+                        </Link>
 
-                  {/* Secondary items */}
-                  <div className='w-64 bg-gray-50'>
-                    {secondaryItems.map((item) => (
-                      <Link key={item.label} href={item.href} className='block py-3 px-4 hover:bg-gray-100 text-gray-700' onClick={() => setIsProjectsDropdownOpen(false)}>
-                        {item.label}
-                      </Link>
+                        {/* Secondary items for projects */}
+                        {hoveredProjectItem === item.label && item.secondaryItems.length > 0 && (
+                          <div className='absolute top-0 left-full bg-gray-50 shadow-lg border border-gray-200 w-64' onMouseLeave={() => setHoveredProjectItem(null)}>
+                            {item.secondaryItems.map((secondaryItem) => (
+                              <Link
+                                key={secondaryItem.label}
+                                href={secondaryItem.href}
+                                className='block py-3 px-4 hover:bg-gray-100 text-gray-700'
+                                onClick={() => {
+                                  setIsProjectsDropdownOpen(false);
+                                  setHoveredProjectItem(null);
+                                }}
+                              >
+                                {secondaryItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -168,27 +226,46 @@ const CleverleylabHeader = () => {
               </button>
 
               {isResourcesDropdownOpen && (
-                <div className='absolute top-full left-0 z-50 bg-white shadow-lg border border-gray-200 flex'>
-                  {/* Primary resources items */}
-                  <div className='w-64'>
+                <div className='absolute top-full left-0 z-50 bg-white shadow-lg border border-gray-200'>
+                  <div className='relative w-64'>
                     {resourcesItems.map((item) => (
-                      <Link
+                      <div
                         key={item.label}
-                        href={item.href}
-                        className='block py-3 px-4 hover:bg-gray-50 text-gray-700 border-b border-gray-100 last:border-b-0'
-                        onClick={() => setIsResourcesDropdownOpen(false)}
+                        className='relative'
+                        onMouseEnter={() => setHoveredResourceItem(item.label)}
+                        onMouseLeave={() => (item.secondaryItems.length === 0 ? setHoveredResourceItem(null) : null)}
                       >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
+                        <Link
+                          href={item.href}
+                          className='block py-3 px-4 hover:bg-gray-50 text-gray-700 border-b border-gray-100 last:border-b-0'
+                          onClick={() => {
+                            setIsResourcesDropdownOpen(false);
+                            setHoveredResourceItem(null);
+                          }}
+                        >
+                          {item.label}
+                          {item.secondaryItems.length > 0 && <ChevronRight className='w-4 h-4 absolute right-4 top-4' />}
+                        </Link>
 
-                  {/* Secondary resource items */}
-                  <div className='w-64 bg-gray-50'>
-                    {resourcesSecondaryItems.map((item) => (
-                      <Link key={item.label} href={item.href} className='block py-3 px-4 hover:bg-gray-100 text-gray-700' onClick={() => setIsResourcesDropdownOpen(false)}>
-                        {item.label}
-                      </Link>
+                        {/* Secondary items for resources */}
+                        {hoveredResourceItem === item.label && item.secondaryItems.length > 0 && (
+                          <div className='absolute top-0 left-full bg-gray-50 shadow-lg border border-gray-200 w-64' onMouseLeave={() => setHoveredResourceItem(null)}>
+                            {item.secondaryItems.map((secondaryItem) => (
+                              <Link
+                                key={secondaryItem.label}
+                                href={secondaryItem.href}
+                                className='block py-3 px-4 hover:bg-gray-100 text-gray-700'
+                                onClick={() => {
+                                  setIsResourcesDropdownOpen(false);
+                                  setHoveredResourceItem(null);
+                                }}
+                              >
+                                {secondaryItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -242,18 +319,28 @@ const CleverleylabHeader = () => {
 
               {isMobileProjectsOpen && (
                 <div className='bg-gray-50'>
-                  {/* Primary project items */}
                   {projectItems.map((item) => (
-                    <Link key={item.label} href={item.href} className='block py-2 px-12 hover:bg-gray-100 text-gray-700 text-sm' onClick={() => setIsMobileMenuOpen(false)}>
-                      {item.label}
-                    </Link>
-                  ))}
+                    <div key={item.label}>
+                      <Link href={item.href} className='block py-2 px-12 hover:bg-gray-100 text-gray-700 text-sm' onClick={() => setIsMobileMenuOpen(false)}>
+                        {item.label}
+                      </Link>
 
-                  {/* Secondary items in mobile view */}
-                  {secondaryItems.map((item) => (
-                    <Link key={item.label} href={item.href} className='block py-2 px-12 hover:bg-gray-100 text-gray-700 text-sm' onClick={() => setIsMobileMenuOpen(false)}>
-                      {item.label}
-                    </Link>
+                      {/* Secondary items nested under their primary item */}
+                      {item.secondaryItems.length > 0 && (
+                        <div className='ml-4'>
+                          {item.secondaryItems.map((secondaryItem) => (
+                            <Link
+                              key={secondaryItem.label}
+                              href={secondaryItem.href}
+                              className='block py-2 px-12 hover:bg-gray-100 text-gray-700 text-sm'
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {secondaryItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               )}
@@ -294,18 +381,28 @@ const CleverleylabHeader = () => {
 
               {isMobileResourcesOpen && (
                 <div className='bg-gray-50'>
-                  {/* Primary resources items */}
                   {resourcesItems.map((item) => (
-                    <Link key={item.label} href={item.href} className='block py-2 px-12 hover:bg-gray-100 text-gray-700 text-sm' onClick={() => setIsMobileMenuOpen(false)}>
-                      {item.label}
-                    </Link>
-                  ))}
+                    <div key={item.label}>
+                      <Link href={item.href} className='block py-2 px-12 hover:bg-gray-100 text-gray-700 text-sm' onClick={() => setIsMobileMenuOpen(false)}>
+                        {item.label}
+                      </Link>
 
-                  {/* Secondary resource items */}
-                  {resourcesSecondaryItems.map((item) => (
-                    <Link key={item.label} href={item.href} className='block py-2 px-12 hover:bg-gray-100 text-gray-700 text-sm' onClick={() => setIsMobileMenuOpen(false)}>
-                      {item.label}
-                    </Link>
+                      {/* Secondary items nested under their primary item */}
+                      {item.secondaryItems.length > 0 && (
+                        <div className='ml-4'>
+                          {item.secondaryItems.map((secondaryItem) => (
+                            <Link
+                              key={secondaryItem.label}
+                              href={secondaryItem.href}
+                              className='block py-2 px-12 hover:bg-gray-100 text-gray-700 text-sm'
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {secondaryItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               )}

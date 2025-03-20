@@ -17,44 +17,44 @@ const elements: ElementData[] = [
     id: 1,
     title: 'Element 1',
     description: 'Organizational Transition Policy',
-    link: '/doc/main-contents/element-1',
+    link: '/doc/six-core-elements/element-1',
   },
   {
     id: 2,
     title: 'Element 2',
     description: 'Transition Tracking and Monitoring',
-    link: '/doc/main-contents/element-2',
+    link: '/doc/six-core-elements/element-2',
   },
   {
     id: 3,
     title: 'Element 3',
     description: 'Transition Readiness',
-    link: '/doc/main-contents/element-3',
+    link: '/doc/six-core-elements/element-3',
   },
   {
     id: 4,
     title: 'Element 4',
     description: 'Transition Planning',
-    link: '/doc/main-contents/element-4',
+    link: '/doc/six-core-elements/element-4',
   },
   {
     id: 5,
     title: 'Element 5',
     description: 'Transfer of Care',
-    link: '/doc/main-contents/element-5',
+    link: '/doc/six-core-elements/element-5',
   },
   {
     id: 6,
     title: 'Element 6',
     description: 'Transfer Completion',
-    link: '/doc/main-contents/element-6',
+    link: '/doc/six-core-elements/element-6',
   },
 ];
 
 const MainContentsCard = () => {
   return (
     <div className='w-full py-10'>
-      <h2 className='text-2xl md:text-[32px] font-bold mb-6 md:mb-[35px] font-urbanist'>Main Contents</h2>
+      <h2 className='text-2xl md:text-[32px] font-bold mb-6 md:mb-[35px] font-urbanist'>Six Core Elements</h2>
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10'>
         {elements.map((element) => (

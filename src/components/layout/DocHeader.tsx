@@ -8,7 +8,7 @@ import CleverleylabHeader from '@/components/layout/CleverleylabHeader';
 const devDocPathAssetMapping: Record<string, string> = {
   '/doc/getting-started': 'doc_header_getting_started.svg',
   '/doc/about-this-resource': 'doc_header_about_this_resource.svg',
-  '/doc/main-contents': 'doc_header_main_content.svg',
+  '/doc/six-core-elements': 'doc_header_six_core_elements.svg',
   '/doc/resources-lists': 'doc_header_resource_list.svg',
   '/doc/glossary': 'doc_header_appendices_gt.svg',
   '/doc/citation': 'doc_header_appendice_citation.svg',
@@ -17,7 +17,7 @@ const devDocPathAssetMapping: Record<string, string> = {
 const prodDocPathAssetMapping: Record<string, string> = {
   '/doc/getting-started/': 'doc_header_getting_started.svg',
   '/doc/about-this-resource/': 'doc_header_about_this_resource.svg',
-  '/doc/main-contents/': 'doc_header_main_content.svg',
+  '/doc/six-core-elements/': 'doc_header_six_core_elements.svg',
   '/doc/resources-lists/': 'doc_header_resource_list.svg',
   '/doc/glossary/': 'doc_header_appendices_gt.svg',
   '/doc/citation/': 'doc_header_appendice_citation.svg',

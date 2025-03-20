@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
@@ -10,42 +10,42 @@ export default function ChooseContent() {
       title: 'Organizational Transition Policy',
       description: 'Develop a transition policy and provide staff training on facilitating transitions.',
       width: '224px',
-      href: '/doc/main-contents/element-1',
+      href: '/doc/six-core-elements/element-1',
     },
     {
       number: '02',
       title: 'Transition tracking and monitoring',
       description: 'Establish a protocol for tracking and monitoring transition steps.',
       width: '224px',
-      href: '/doc/main-contents/element-2',
+      href: '/doc/six-core-elements/element-2',
     },
     {
       number: '03',
       title: 'Transition readiness',
       description: 'Identify youth’s transition-related needs and goals then co-create a transition plan with youth.',
       width: '250px',
-      href: '/doc/main-contents/element-3',
+      href: '/doc/six-core-elements/element-3',
     },
     {
       number: '04',
       title: 'Transition planning',
       description: 'Implement the transition plan, including identifying and collaborating with the adult services.',
       width: '230px',
-      href: '/doc/main-contents/element-4',
+      href: '/doc/six-core-elements/element-4',
     },
     {
       number: '05',
       title: 'Transfer of care',
       description: 'Prepare a transfer package and hold a transfer meeting between child and adult services.',
       width: '230px',
-      href: '/doc/main-contents/element-5',
+      href: '/doc/six-core-elements/element-5',
     },
     {
       number: '06',
       title: 'Transfer completion',
       description: 'Follow up with youth post-transition to ensure they have connected with adult services.',
       width: '230px',
-      href: '/doc/main-contents/element-6',
+      href: '/doc/six-core-elements/element-6',
     },
   ].sort((a, b) => parseInt(a.number) - parseInt(b.number));
 
@@ -115,9 +115,9 @@ export default function ChooseContent() {
             Further support for the implementation of these core components can be found in the <span className='text-navy-1 font-semibold'>Unite Implementation Workbook.</span>{' '}
             These two resources are intended to be used together.
           </p>
-          <button className='button-fill pr-4 w-full sm:w-auto'>
-            Download PDF
-            <ArrowRight size={20} className='ms-3' />
+          <button className='button-fill px-8 w-full sm:w-auto'>
+            Coming soon!
+            {/* <ArrowRight size={20} className='ms-3' /> */}
           </button>
         </div>
       </div>
