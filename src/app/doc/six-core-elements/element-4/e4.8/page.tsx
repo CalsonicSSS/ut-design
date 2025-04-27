@@ -3,6 +3,7 @@ import HighlightText from '@/components/doc/elementSupportComponents/HighlightTe
 import HighlightTextButton from '@/components/doc/elementSupportComponents/HighlightTextButton';
 import Quote from '@/components/doc/elementSupportComponents/Quote';
 import { ResourcesContentLinks } from '@/components/doc/elementSupportComponents/ResourcesBulletContent';
+import Link from 'next/link';
 import React from 'react';
 
 export default function SubSection4_8() {
@@ -65,8 +66,12 @@ export default function SubSection4_8() {
       <p className='mt-8 mb-6'>
         Ensure the young person (and <HighlightText content='family members/caregivers' clickToId='gt-fmc' />, where appropriate) is aware of community mental health services
         available to them, the purposes they serve, and how they can be accessed (e.g., walk-in services, phone lines). This should be included in the individualized transition
-        plan (see core component 4.5). Note that the appropriate mental health and community supports will depend upon the unique needs of the individual youth as well as the
-        specific resources available in their geographic area.
+        plan (see core{' '}
+        <Link href={'/doc/six-core-elements/element-4/e4.5'} className='underline text-navy-0'>
+          Component 4.5
+        </Link>
+        ). Note that the appropriate mental health and community supports will depend upon the unique needs of the individual youth as well as the specific resources available in
+        their geographic area.
       </p>
       <p className='mb-8'>
         Due to the complex and varying biopsychosocial issues, shifting symptom patterns and presentations, and comorbid diagnoses seen in youth populations, transition pathways

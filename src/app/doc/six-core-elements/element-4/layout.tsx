@@ -20,7 +20,10 @@ const subsections = [
     title:
       'Collaborate with youth (and family members/caregivers, if invited by youth) to identify adult services that are an appropriate fit, and confirm the adult mental health service eligibility criteria.',
   },
-  { id: '4.4', title: 'Identify the most responsible person to coordinate the transition process, act as the main contact, and ensure continuity in the youth’s care.' },
+  {
+    id: '4.4',
+    title: 'Discuss the optimal timing of transfer with youth and other relevant service providers in the circle of care (and family members/caregivers, if appropriate).',
+  },
   {
     id: '4.5',
     title: 'In collaboration with youth (and their family members/caregivers, if appropriate), complete an individualized transition plan and keep it up-to-date.',

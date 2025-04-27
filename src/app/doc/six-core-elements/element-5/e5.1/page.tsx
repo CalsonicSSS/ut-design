@@ -2,6 +2,7 @@ import HighlightText from '@/components/doc/elementSupportComponents/HighlightTe
 import HighlightTextButton from '@/components/doc/elementSupportComponents/HighlightTextButton';
 import Quote from '@/components/doc/elementSupportComponents/Quote';
 import { ResourcesContentLinks } from '@/components/doc/elementSupportComponents/ResourcesBulletContent';
+import Link from 'next/link';
 import React from 'react';
 
 export default function SubSection5_1() {
@@ -27,10 +28,23 @@ export default function SubSection5_1() {
         and <HighlightText content='adult mental health services' clickToId='gt-amhs' /> clinician(s), <HighlightText content='transition navigators' clickToId='gt-tn' />, and{' '}
         <HighlightText content='family members/caregivers' clickToId='gt-fmc' /> if appropriate) It is often organized and led by the{' '}
         <HighlightText content='most responsible provider' clickToId='gt-mrp' /> at that point in time. It is important to ensure youth understand the purpose and goals of the
-        meeting,and that they can choose how they would like to be involved. For more information about who should be involved in this meeting, reference the discussion in
-        component 4.1 and 4.2.
+        meeting, and that they can choose how they would like to be involved. For more information about who should be involved in this meeting, reference the discussion in{' '}
+        <Link href={'/doc/six-core-elements/element-4/e4.1'} className='underline text-navy-0'>
+          Component 4.1
+        </Link>{' '}
+        and{' '}
+        <Link href={'/doc/six-core-elements/element-4/e4.2'} className='underline text-navy-0'>
+          Component 4.2
+        </Link>
+        .
       </p>
-      <p className='mb-8'>“Parallel Care” and “Joint Working Meetings” may also be relevant for this component. Please see Component 4.6 for definitions.</p>
+      <p className='mb-8'>
+        “Parallel Care” and “Joint Working Meetings” may also be relevant for this component. Please see{' '}
+        <Link href={'/doc/six-core-elements/element-4/e4.6'} className='underline text-navy-0'>
+          Component 4.6
+        </Link>{' '}
+        for definitions.
+      </p>
       <ResourcesContentLinks
         contents={[
           {

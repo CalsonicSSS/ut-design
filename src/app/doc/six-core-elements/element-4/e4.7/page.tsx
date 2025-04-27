@@ -17,7 +17,7 @@ export default function SubSection4_7() {
         Youth facing mental health challenges are often treated within a primary care setting. Active engagement of a{' '}
         <HighlightText content='primary care provider' clickToId='gt-pcp' /> is closely linked to improved health outcomes as youth transition in{' '}
         <HighlightText content='adult mental health services' clickToId='gt-amhs' />{' '}
-        <AuthorReference refName='(Toulany et al., 2022)' href='https://academic.oup.com/pch/article/27/5/297/6673170' />. TThis continued involvement in care contributes to
+        <AuthorReference refName='(Toulany et al., 2022)' href='https://academic.oup.com/pch/article/27/5/297/6673170' />. This continued involvement in care contributes to
         positive long-term health outcomes for youth{' '}
         <AuthorReference refName='(Toulany et al., 2019)' href='https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2740785' />. Continuity of care refers to ongoing,
         coordinated care management with a goal of achieving quality health care{' '}

@@ -32,9 +32,9 @@ export default function SubSection4_1() {
         A transition navigator is a registered health professional who has expertise in transition coordination and case management, and who provides short term support (often 1-6
         months) during the transition period <AuthorReference refName='(Cleverley et al., 2018)' href='https://pmc.ncbi.nlm.nih.gov/articles/PMC6254258/' />. They work with youth
         (and family/caregivers, if appropriate) and members of the clinical team to identify needs post-discharge and goals for transfer of care. They have a strong understanding
-        of community programs and resources and are able to work with youth to identify and connect with appropriate services. They continue to provide support to the youth post
-        discharge and throughout the referral and transition to adult services or other appropriate services. They may also provide psychoeducation and some short-term therapeutic
-        support while the youth is between services.
+        of community programs and resources and are able to work with youth to identify and connect with appropriate services. They continue to provide support to the youth
+        post-discharge and throughout the referral and transition to adult services or other appropriate services. They may also provide psychoeducation and some short-term
+        therapeutic support while the youth is between services.
       </p>
       <ResourcesContentLinks
         contents={[

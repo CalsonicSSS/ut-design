@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import DotList from './elementSupportComponents/DotList';
+import LinkContent from './elementSupportComponents/LinkContent';
 
 export default function AboutThisResourceContent() {
   return (
@@ -43,15 +44,20 @@ export default function AboutThisResourceContent() {
 
       <section id='development-of-this-resource' data-section className='pt-6 md:pt-10'>
         <h1 className='doc-content-sub-title lg:text-[23px] sm:text-[20px] mb-4'>Development of this Resource</h1>
-        <p className='mb-4 md:mb-6 text-base'>This resource has been developed through extensive community collaborations, research partnerships, and literature review. </p>
+        <p className='mb-4 md:mb-6 text-base'>This resource has been developed through extensive community collaborations, research partnerships, and a literature review. </p>
         <p className='mb-4 md:mb-6 text-base'>
           Unless otherwise cited, definitions in this guidebook were developed in consultation with an Expert Advisory Committee that included researchers, clinicians, youth,
           family members, and caregivers from across Canada.
         </p>
         <p className='mb-4 md:mb-6 text-base'>
           {'Quotations and “Notes from a Navigator” were sourced from research studies conducted by our research team, including a '}
-          <span className='underline'>pan-Canadian Delphi study that developed core components</span> and{' '}
-          <span className='underline'>the Navigator Evaluation Advancing Transitions (NEAT) Study.</span>.
+          <LinkContent
+            content='pan-Canadian Delphi study that developed core components'
+            href='https://link.springer.com/article/10.1007/s00787-021-01806-6'
+            additionalStyle='underline'
+          />
+          <span> and </span>
+          <LinkContent content='the Navigator Evaluation Advancing Transitions (NEAT) Study.' href='https://doi.org/10.1136/bmjopen-2021-051190' additionalStyle='underline' />
         </p>
         <p className='font-bold mb-3 text-base'>{"All 'Notes from a Navigator' quotes are attributed to a manuscript in preparation and should not be copied/reproduced:"}</p>
         <DotList
@@ -70,14 +76,11 @@ export default function AboutThisResourceContent() {
                 Szatmari P. (2021). Prioritizing core components of successful transitions from child to adult mental health care:{' '}
               </span>
               A national Delphi survey with youth, caregivers, and health professionals. European Child & Adolescent Psychiatry.{' '}
-              <Link
-                className='text-navy-0 underline inline break-words'
-                target='_blank'
-                rel='noopener noreferrer'
+              <LinkContent
+                content={'https://doi.org/10.1007/s00787-021-01806-6'}
                 href={'https://link.springer.com/article/10.1007/s00787-021-01806-6'}
-              >
-                https://doi.org/10.1007/s00787-021-01806-6
-              </Link>
+                additionalStyle='text-navy-0 underline'
+              />
             </div>,
           ]}
           ms={[0, 0, 12]}

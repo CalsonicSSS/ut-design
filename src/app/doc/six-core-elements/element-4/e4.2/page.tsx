@@ -11,21 +11,22 @@ export default function SubSection4_2() {
         network. This may include specific <HighlightText content='transition navigators' clickToId='gt-tn' />,{' '}
         <HighlightText content='primary care providers' clickToId='gt-pcp' />, school-based services, peer support workers, etc. The identification of transition team members will
         also be informed by your organization&apos;s framework or policy for responsibilities related to transition within care teams (see{' '}
-        <Link href={'doc/main-contents/element-1/e1.5'} className=' underline text-navy-0'>
+        <Link href={'/doc/six-core-elements/element-1/e1.5'} className=' underline text-navy-0'>
           Component 1.5
-        </Link>{' '}
+        </Link>
         ).
       </p>
       <p className='mb-6'>
         When defining roles, consider when each team member will be engaged during the transition process and the capacity in which they will be involved. This is also an
-        opportunity to identify current gaps in care that that need to be addressed before the transition
+        opportunity to identify current gaps in care that need to be addressed before the transition
       </p>
       <p className='mb-8'>
         The specific roles and responsibilities of each team member should be captured and regularly updated in the <HighlightText content='transition plan' clickToId='gt-tplan' />
         . For more information, refer to the transition plan document resources in{' '}
-        <Link href={'doc/main-contents/element-1/e3.3'} className='underline text-navy-0'>
+        <Link href={'/doc/six-core-elements/element-3/e3.3'} className='underline text-navy-0'>
           Component 3.3
-        </Link>{' '}
+        </Link>
+        .
       </p>
       <Quote
         title='NOTES FROM A NAVIGATOR'

@@ -25,7 +25,7 @@ const subsections = [
     id: '1.5',
     title: 'Determine clear responsibilities for all roles within the organization involved in the transition of care, to be further informed by the needs of each youth.',
   },
-  { id: '1.6', title: 'Partner with the youth (and family members/caregivers, if appropriate) at all phases of transition and decision-making' },
+  { id: '1.6', title: 'Partner with the youth (and family members/caregivers, if appropriate) at all phases of transition and decision-making.' },
   { id: '1.7', title: 'Establish a plan to evaluate the organization’s transition protocol.' },
 ];
 

@@ -9,7 +9,7 @@ export default function SubSection1_4() {
       <p className='mb-6'>
         Whole-team approaches are more successful in ensuring ongoing adaptation and support for new policies in health care. Providing proactive, accessible, and integrated
         education about youth mental health care transitions can create important opportunities for professional and organizational development{' '}
-        <AuthorReference refName='(Nilsen et al., 2020)' href='https://bmchealthservres.biomedcentral.com/articles/10.1186/s12913-020-4999-8' />. CCreating a plan to support staff
+        <AuthorReference refName='(Nilsen et al., 2020)' href='https://bmchealthservres.biomedcentral.com/articles/10.1186/s12913-020-4999-8' />. Creating a plan to support staff
         learning and engagement with transition resources ensures a shared understanding of the organization&apos;s approach to care transitions and each staff member&apos;s role
         in the process <AuthorReference refName='(Nilsen et al., 2020)' href='https://bmchealthservres.biomedcentral.com/articles/10.1186/s12913-020-4999-8' />. A lack of training
         and education for care providers has been identified as a major barrier to successful youth-to-adult care transitions{' '}

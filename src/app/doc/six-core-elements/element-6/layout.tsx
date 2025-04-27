@@ -12,7 +12,7 @@ const subsections = [
   {
     id: '6.1',
     title:
-      'The person most responsible for the transition, contacts the youth(and family members/caregivers, if appropriate) 3 to 6 months after last child and adolescent mental health service visit, or sooner if necessary, to confirm transfer to adult mental health services.',
+      'The person most responsible for the transition, contacts the youth (and family members/caregivers, if appropriate) 3 to 6 months after last child and adolescent mental health service visit, or sooner if necessary, to confirm transfer to adult mental health services.',
   },
 ];
 

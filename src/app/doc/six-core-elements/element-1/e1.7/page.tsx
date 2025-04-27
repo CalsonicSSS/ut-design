@@ -19,7 +19,7 @@ export default function SubSection1_7() {
       <p className='mb-6'>
         Your evaluation plan will depend on which transition-related outcomes have been identified as priorities for your organization. For example, if you choose to implement
         transition case conferences (or “warm handover” meetings) as part of your organization&apos;s transition protocol, your evaluation plan might include measuring the
-        proportion of transitioning youth who receive a <HighlightText content='warm handover' clickToId='gt-wh' /> ,and/or assessing clinician-reported barriers and facilitators
+        proportion of transitioning youth who receive a <HighlightText content='warm handover' clickToId='gt-wh' />, and/or assessing clinician-reported barriers and facilitators
         to conducting warm handovers.
       </p>
       <p className='mb-8'>

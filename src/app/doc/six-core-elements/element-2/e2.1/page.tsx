@@ -18,8 +18,8 @@ export default function SubSection2_1() {
       </div>
 
       <p className='mt-8 mb-6'>
-        When preparing youth to transition out of <HighlightText content='child and adolescent mental health services' clickToId='gt-caamhs' /> , there are several factors that
-        need to be considered. For many organizations, this transition is age-dependent. For example, some organizations require young adults to transition to adult mental health
+        When preparing youth to transition out of <HighlightText content='child and adolescent mental health services' clickToId='gt-caamhs' />, there are several factors that need
+        to be considered. For many organizations, this transition is age-dependent. For example, some organizations require young adults to transition to adult mental health
         services when they turn 18. Other organizations may specify additional criteria for transitions, such as completing a set number of sessions before transitioning and/or
         receiving a specific psychiatric diagnosis (e.g., psychosis).
       </p>

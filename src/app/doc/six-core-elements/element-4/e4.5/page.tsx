@@ -1,5 +1,6 @@
 import HighlightText from '@/components/doc/elementSupportComponents/HighlightText';
 import Quote from '@/components/doc/elementSupportComponents/Quote';
+import Link from 'next/link';
 import React from 'react';
 
 export default function SubSection4_5() {
@@ -7,9 +8,12 @@ export default function SubSection4_5() {
     <div className='doc-content-text'>
       <p>
         An individualized transition plan outlines the specific transition goals, support needs and actions required to help youth transition into adult mental health services. It
-        acts as a reference for navigators and clinicians to support youth through the transition process and ensure their needs are met (see Component 3.3). Developing an
-        individualized transition plan requires strong collaboration with youth and they should be made aware of the transition plan as they undergo changes in the care they
-        receive. As youth progress through the transition process, it is important to update the transition plan.
+        acts as a reference for navigators and clinicians to support youth through the transition process and ensure their needs are met (see{' '}
+        <Link href={'/doc/six-core-elements/element-3/e3.3'} className='underline text-navy-0'>
+          Component 3.3
+        </Link>
+        ). Developing an individualized transition plan requires strong collaboration with youth and they should be made aware of the transition plan as they undergo changes in the
+        care they receive. As youth progress through the transition process, it is important to update the transition plan.
       </p>
       <p className='font-bold'>The transition plan might include:</p>
       <p className='mb-6'>

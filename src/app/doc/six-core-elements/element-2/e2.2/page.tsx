@@ -1,4 +1,5 @@
 import HighlightText from '@/components/doc/elementSupportComponents/HighlightText';
+import LinkContent from '@/components/doc/elementSupportComponents/LinkContent';
 import Quote from '@/components/doc/elementSupportComponents/Quote';
 import { ResourcesContentLinks } from '@/components/doc/elementSupportComponents/ResourcesBulletContent';
 
@@ -8,8 +9,8 @@ export default function SubSection2_2() {
       <p className='mb-6'>
         A transition flow sheet or logbook should be created and regularly updated to track key steps in the youth&apos;s transition process, including confirming the timing of
         transfer, conducting a <HighlightText content='readiness assessment' clickToId='gt-ra' />, and identifying all interest holders involved. This logbook supports transition
-        navigators (or the most responsible clinician) in tracking and monitoring the youth&apos;s ongoing <HighlightText content='transition process' clickToId='gt-tprocess' />{' '}
-        .It also aids in clinical decision-making, e.g., determining next steps in a transition journey. Tracking also enables transition navigators to monitor youth retention
+        navigators (or the most responsible clinician) in tracking and monitoring the youth&apos;s ongoing <HighlightText content='transition process' clickToId='gt-tprocess' />.{' '}
+        It also aids in clinical decision-making, e.g., determining next steps in a transition journey. Tracking also enables transition navigators to monitor youth retention
         within the program.
       </p>
       <p className='mb-8'>
@@ -18,8 +19,8 @@ export default function SubSection2_2() {
         within the program annually).
       </p>
       <p className='mb-8'>
-        Transition logbooks can be developed and managed on shared drives (i.e., OneDrive) and/or on electronic platforms (i.e., REDCap) so they can be easily accessed by
-        transition navigators and/or the most responsible clinician.
+        Transition logbooks can be developed and managed on shared drives (i.e., OneDrive) and/or on electronic platforms (i.e.,{' '}
+        <LinkContent content='REDCap' href='https://project-redcap.org/' />) so they can be easily accessed by transition navigators and/or the most responsible clinician.
       </p>
       <ResourcesContentLinks
         contents={[

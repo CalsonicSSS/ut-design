@@ -13,7 +13,7 @@ export default function SubSection3_2() {
         clickToId='gt-tplan'
       />
       <p className='mt-8 mb-6'>
-        The transition plan is a living document that outlines the plan of care throughout the <HighlightText content='transition process' clickToId='gt-tprocess' />, It should be
+        The transition plan is a living document that outlines the plan of care throughout the <HighlightText content='transition process' clickToId='gt-tprocess' />. It should be
         co-created with youth and their identified care team. This document should outline goals for transition and planned interventions, which will be guided by ongoing{' '}
         <HighlightText content='transition readiness assessment' clickToId='gt-R' /> and youth&apos;s priorities for transition care.
       </p>

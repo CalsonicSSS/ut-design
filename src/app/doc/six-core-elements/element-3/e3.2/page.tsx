@@ -22,7 +22,7 @@ export default function SubSection3_2() {
         <HighlightText content='adult mental health services' clickToId='gt-amhs' />. Youth have identified decreased support in adult mental health services compared to child and
         adolescent services, and a lack of information sharing between systems. Child and adolescent mental health services are seen as nurturing and family-oriented, whereas adult
         mental health services treat youth as autonomous adults with limited family involvement{' '}
-        <AuthorReference refName='(Borah et al., 2021)' href='https://www.tandfonline.com/doi/full/10.1080/15332985.2021.1894629' />. TThis difference between the two systems can
+        <AuthorReference refName='(Borah et al., 2021)' href='https://www.tandfonline.com/doi/full/10.1080/15332985.2021.1894629' />. This difference between the two systems can
         result in a sudden shift in the type and level of care, increasing the risk of care disengagement{' '}
         <AuthorReference refName='(Borah et al., 2021)' href='https://www.tandfonline.com/doi/full/10.1080/15332985.2021.1894629' />. Youth have reported feeling underprepared for
         the transition process, particularly due to a lack of information about their available options{' '}

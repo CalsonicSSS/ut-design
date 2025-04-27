@@ -19,8 +19,8 @@ export default function ElementHeader({ elementTitle, subsectionId, subsectionTi
               Guidebook
             </Link>
             <ChevronRight size={13} className='mx-2 flex-shrink-0' />
-            <Link href='/doc/main-contents' className='flex-shrink-0'>
-              Main Contents
+            <Link href='/doc/six-core-elements' className='flex-shrink-0'>
+              Six Core Elements
             </Link>
             <ChevronRight size={13} className='mx-2 flex-shrink-0' />
             <span className='flex-shrink-0'>{elementTitle}</span>
@@ -36,8 +36,8 @@ export default function ElementHeader({ elementTitle, subsectionId, subsectionTi
               Guidebook
             </Link>
             <ChevronRight size={13} className='mx-2 flex-shrink-0' />
-            <Link href='/doc/main-contents' className='hover:underline flex-shrink-0'>
-              Main Contents
+            <Link href='/doc/six-core-elements' className='hover:underline flex-shrink-0'>
+              Six Core Elements
             </Link>
             <ChevronRight size={13} className='mx-2 flex-shrink-0' />
             <span className='flex-shrink-0'>{elementTitle}</span>
@@ -45,12 +45,14 @@ export default function ElementHeader({ elementTitle, subsectionId, subsectionTi
             <span className='flex-shrink-0'>Element {subsectionId}</span>
           </div>
 
-          {/* Subsection title - only on desktop */}
+          {/* desktop only Subsection title view  */}
           <h1 className='font-lato text-[36px] font-medium leading-[50px] w-[75%]'>
             {subsectionId} {subsectionTitle}
           </h1>
         </div>
       </div>
+      {/* mobile only Element Subsection title view */}
+
       <p className='lg:hidden font-lato text-[24px] font-medium leading-[25px] text-[#043F76] px-8 pt-8'>
         {subsectionId} {subsectionTitle}
       </p>

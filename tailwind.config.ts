@@ -1,10 +1,5 @@
 import type { Config } from 'tailwindcss';
 
-// under theme, is where you define your own custom styles for the tailwindcss for this specific project
-// you can either extend the default configurations or override them
-// extend means you can later combine your own custom configurations with the default utility classes
-// you must use Tailwind's predefined category names such as colors, fontFamily, fontSize, etc before adding your custom styles under either extend or override
-// under each category, you can then add your custom styles through key-value pairs using your own naming
 const config: Config = {
   darkMode: ['class'],
   content: ['./src/pages/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],

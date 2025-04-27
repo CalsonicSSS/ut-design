@@ -1,6 +1,7 @@
 import HighlightText from '@/components/doc/elementSupportComponents/HighlightText';
 import HighlightTextButton from '@/components/doc/elementSupportComponents/HighlightTextButton';
 import Quote from '@/components/doc/elementSupportComponents/Quote';
+import Link from 'next/link';
 import React from 'react';
 
 export default function SubSection4_6() {
@@ -32,8 +33,15 @@ export default function SubSection4_6() {
       </p>
       <p className='mb-8'>
         While six months is the suggested length of time, the organization&apos;s timing for initiating the transition planning process may be dependent on the service design or
-        program length. Standards for this initiation point should be set in the organization&apos;s policy {'–'} refer to Components 2.1 and 2.2 for more information on this
-        topic.
+        program length. Standards for this initiation point should be set in the organization&apos;s policy {'–'} refer to{' '}
+        <Link href={'/doc/six-core-elements/element-2/e2.1'} className='underline text-navy-0'>
+          Component 2.1
+        </Link>{' '}
+        and{' '}
+        <Link href={'/doc/six-core-elements/element-2/e2.2'} className='underline text-navy-0'>
+          2.2
+        </Link>{' '}
+        for more information on this topic.
       </p>
       <Quote
         title='NOTES FROM A NAVIGATOR'

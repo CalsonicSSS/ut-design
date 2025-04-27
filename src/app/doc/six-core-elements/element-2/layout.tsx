@@ -12,7 +12,7 @@ const subsections = [
   { id: '2.1', title: 'Establish organization-specific criteria and process for identifying youth who will be transitioning out of child and adolescent mental health services.' },
   {
     id: '2.2',
-    title: 'Establish a transition flow sheet or log book that tracks the completion of important steps as youth transition out of child and adolescent mental health services',
+    title: 'Establish a transition flow sheet or log book that tracks the completion of important steps as youth transition out of child and adolescent mental health services.',
   },
 ];
 
