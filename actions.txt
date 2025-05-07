@@ -1,0 +1,21 @@
+to push to WP:
+
+- next.config.mjs: use prod config 
+
+- /utils.ts: change to "PROD"
+
+- "npm run build"
+
+- upload all folders and files from "out" to WP file manager folder
+
+
+-------------------------------------------------------------------------------
+
+
+local dev:
+
+- next.config.mjs: use dev config 
+
+- /utils.ts: change to "DEV"
+
+- "npm run dev" to see changes locally

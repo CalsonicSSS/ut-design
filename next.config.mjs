@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
+// dev config
 // const nextConfig = {};
 
-/** @type {import('next').NextConfig} */
+// prod config
 const nextConfig = {
   output: 'export',
   basePath: '/unite-toolkit',
