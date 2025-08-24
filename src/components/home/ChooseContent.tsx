@@ -1,4 +1,6 @@
-// import { ArrowRight } from 'lucide-react';
+// 'use client';
+
+// import { downloadPDF, pdfUrls } from '@/utils';
 import Link from 'next/link';
 import React from 'react';
 
@@ -112,13 +114,25 @@ export default function ChooseContent() {
       <div className='w-full flex justify-center items-center bg-white bg-opacity-43 px-4 sm:px-8 lg:px-0 lg:py-40 py-24'>
         <div className='w-full lg:w-[1217px] border-dashed border-2 border-[#8E98A8] rounded-3xl flex flex-col lg:flex-row justify-between items-center p-6 lg:px-[80px] lg:h-[157px]'>
           <p className='w-full lg:w-[635px] base-text-content text-size-base lg:text-xl text-center lg:text-left mb-6 lg:mb-0'>
-            Further support for the implementation of these core components can be found in the <span className='text-navy-1 font-semibold'>Unite Implementation Workbook.</span>{' '}
-            These two resources are intended to be used together.
+            Further support for the implementation of these core components can be found in the{' '}
+            <Link
+              target='_blank'
+              rel='noopener noreferrer'
+              href={`https://cleverleylab.com/unite-toolkit/UNITE Transition Implementation Workbook.pdf`}
+              className='text-navy-1 font-semibold'
+            >
+              Unite Implementation Workbook
+            </Link>
+            . These two resources are intended to be used together.
           </p>
-          <button className='button-fill px-8 w-full sm:w-auto'>
-            Coming soon!
-            {/* <ArrowRight size={20} className='ms-3' /> */}
-          </button>
+          <Link
+            target='_blank'
+            rel='noopener noreferrer'
+            href={`https://cleverleylab.com/unite-toolkit/UNITE Transition Implementation Workbook.pdf`}
+            className='button-fill px-8 w-full sm:w-auto'
+          >
+            Download PDF
+          </Link>
         </div>
       </div>
     </>

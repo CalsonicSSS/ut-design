@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* When you define classes under @layer components, you're creating reusable class names that compile to the specified Tailwind utilities. */
+/* When you define classes under @layer "components", you're creating reusable class names */
 /* Reducing repetition of styles through a component classname +  Making your component JSX cleaner and more readable with component styles */
-/* Tailwind doesn't automatically put anything in the component layer unless you define something there. */
-/* you have to use @apply to compose / integrate basic given Tailwind utility classes into your custom class names, otherwise you have to use raw css */
+/* Tailwind doesn't automatically put anything in the component layer initially unless you define something there. */
+/* you have to use @apply to compose / integrate given Tailwind utility classes into your custom class names, otherwise you have to use raw css */
 /* @layer tells Tailwind WHERE to inject your custom styles in its CSS cascade under TAILWIND SYSTEM */
 /* There are three layer levels: base, components, and utilities: The order of specificity is: base → components → utilities */
 /* This means utilities will always override component classes! (This ordering is intentional in Tailwind's design) */

@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-// dev config
+// // dev config
 // const nextConfig = {};
 
 // prod config
